@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - UpstairsLK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-brand-600 flex items-center gap-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        UpstairsLK
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-gray-500 hover:text-brand-600 hover:border-b-2 hover:border-brand-600 px-1 pt-1 transition duration-150 ease-in-out">Home</a>
+                    <a href="about.html"
+                        class="text-gray-500 hover:text-brand-600 hover:border-b-2 hover:border-brand-600 px-1 pt-1 transition duration-150 ease-in-out">About
+                        Us</a>
+                    <a href="services.html"
+                        class="text-brand-600 font-semibold border-b-2 border-brand-600 px-1 pt-1">Services</a>
+                    <a href="contact.html"
+                        class="text-gray-500 hover:text-brand-600 hover:border-b-2 hover:border-brand-600 px-1 pt-1 transition duration-150 ease-in-out">Contact</a>
+                    <a href="contact.html"
+                        class="bg-brand-600 text-white px-4 py-2 rounded-lg hover:bg-brand-700 transition">Get a
+                        Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1 px-4">
+                <a href="index.html"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Home</a>
+                <a href="about.html"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">About
+                    Us</a>
+                <a href="services.html"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-brand-600 text-base font-medium text-brand-700 bg-brand-50 focus:outline-none focus:text-brand-800 focus:bg-brand-100 focus:border-brand-700 transition duration-150 ease-in-out">Services</a>
+                <a href="contact.html"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="bg-gray-800 pt-32 pb-12 sm:pt-40 sm:pb-16 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+                Our Services
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+                Comprehensive technology solutions to drive your business forward.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                <!-- Service 1 -->
+                <div
+                    class="flex flex-col h-full p-6 rounded-lg bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-brand-500 text-white mb-6">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
+                    <p class="text-gray-600 flex-grow">
+                        We build high-performance, responsive websites. From simple landing pages to complex e-commerce
+                        platforms and web applications, we use the latest technologies like React, Vue, and modern CSS
+                        frameworks.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Custom Web Apps</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> E-commerce Solutions</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> CMS Development</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="flex flex-col h-full p-6 rounded-lg bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-brand-500 text-white mb-6">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Mobile App Development</h3>
+                    <p class="text-gray-600 flex-grow">
+                        Reach your customers on the go with our mobile app development services. We create native and
+                        cross-platform apps for iOS and Android that offer seamless user experiences.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> iOS & Android Apps</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Flutter / React Native</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> App Maintenance</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="flex flex-col h-full p-6 rounded-lg bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-brand-500 text-white mb-6">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
+                    <p class="text-gray-600 flex-grow">
+                        Security is paramount. We help you identify vulnerabilities, secure your infrastructure, and
+                        ensure compliance with industry standards to protect your valuable data.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Security Audits</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Vulnerability Assessment</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Data Protection</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="flex flex-col h-full p-6 rounded-lg bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-brand-500 text-white mb-6">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600 flex-grow">
+                        Migrate to the cloud with confidence. We offer cloud architecture design, migration services,
+                        and management for AWS, Azure, and Google Cloud Platform.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Cloud Migration</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Serverless Architecture</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> DevOps implementation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="flex flex-col h-full p-6 rounded-lg bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-brand-500 text-white mb-6">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Digital Marketing</h3>
+                    <p class="text-gray-600 flex-grow">
+                        Boost your online presence and reach your target audience. Our digital marketing strategies
+                        include SEO, PPC, social media management, and content marketing.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> SEO Optimization</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Social Media Strategy</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Email Marketing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div
+                    class="flex flex-col h-full p-6 rounded-lg bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center justify-center h-16 w-16 rounded-md bg-brand-500 text-white mb-6">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
+                    <p class="text-gray-600 flex-grow">
+                        We design interfaces that are not only visually appealing but also intuitive and user-friendly.
+                        Our design process focuses on user needs and business goals.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> User Research</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Wireframing & Prototyping</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Visual Design</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gray-100 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+                <span class="block">Have a custom requirement?</span>
+                <span class="block text-brand-600">We love solving complex problems.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700">
+                        Discuss Your Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 mt-auto">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        UpstairsLK
+                    </span>
+                    <p class="text-gray-400 text-sm max-w-xs">
+                        UpstairsLK provides top-tier IT solutions for businesses of all sizes. We combine innovation,
+                        expertise, and passion to deliver results.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-base text-gray-300 hover:text-white transition">Home</a>
+                        </li>
+                        <li><a href="about.html" class="text-base text-gray-300 hover:text-white transition">About
+                                Us</a></li>
+                        <li><a href="services.html"
+                                class="text-base text-gray-300 hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html"
+                                class="text-base text-gray-300 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Contact Info</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg> +94 (77) 375 7521</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg> +44 7533 154551</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-brand-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg> info@upstairslk.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                &copy; <span id="year"></span> UpstairsLK. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
